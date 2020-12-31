@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+
 
 export class App extends React.Component {
   state = {
-    fruits: []
+    
   }
 
   componentDidMount () {
@@ -15,12 +15,8 @@ export class App extends React.Component {
   render () {
     return (
       <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
+        <h1></h1>
+       
       </div>
     )
   }
@@ -28,7 +24,7 @@ export class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-    fruits: globalState.fruits
+    
   }
 }
 

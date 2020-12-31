@@ -18,7 +18,11 @@
     "build:server": "npm run knex -- migrate:latest",
     "lint": "eslint --ext .js,.jsx .",
     "webpack": "webpack --config ./client/webpack.config.js",
-    "knex": "knex --knexfile ./server/db/knexfile.js"
+    "knex": 
+    "knex('knex_migration')
+    .delete()
+    .whereIn('name', ['20200425190608_yourMigFile.ts', ...]);
+    "knex --knexfile ./server/db/knexfile.js"
   },
   "babel": {
     "presets": [
@@ -43,6 +47,7 @@
     ]
   },
   "dependencies": {
+    "authenticare": "^0.4.7",
     "express": "^4.17.1",
     "knex": "^0.21.12",
     "pg": "^8.5.1",
