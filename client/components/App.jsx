@@ -30,7 +30,7 @@ export class App extends React.Component {
           <Route exact path='/' component={Home}/>
           <Route path='/form' component={Books}/>
         </Router>
-        <footer>this is a footer. fuck patriarchy</footer>
+        <footer><a href='https://www.linkedin.com/in/orlando-bright-289724130/'>Orlando's LinkedIn</a></footer>
       </div>
       
     )
