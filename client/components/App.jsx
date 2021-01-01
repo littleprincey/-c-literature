@@ -1,7 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchBooks } from '../actions/index'
+import ReactDOM from 'react-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
+import Home from './Home'
+import Nav from './Nav'
+import Form from './Form'
+
+import { fetchBooks } from '../actions/index'
 
 export class App extends React.Component {
   state = {
@@ -13,11 +19,19 @@ export class App extends React.Component {
   }
 
   render () {
+
     return (
-      <div className='app'>
-        <h1></h1>
-       
+      <div className='container'>
+        <Router>
+          <div className='nav'>
+            <Route path='/' component={Nav}/>
+          </div>
+          <Route exact path='/' component={Home}/>
+          <Route path='/form' component={Form}/>
+        </Router>
+        <footer>this is a footer. fuck patriarchy</footer>
       </div>
+      
     )
   }
 }
@@ -29,3 +43,4 @@ function mapStateToProps (globalState) {
 }
 
 export default connect(mapStateToProps)(App)
+
