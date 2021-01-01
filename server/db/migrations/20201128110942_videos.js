@@ -6,10 +6,10 @@ exports.up = (knex, Promise) => {
     table.string('title')
     table.string('author')
     table.string('pub_date')
-    table.string('description')
+    table.string('description', 50000)
     table.string('url')
-    table.string('tag_id')
-    table.string('forecast_id')
+    table.string('tag_id', 5000)
+    table.string('forecast_id', 5000)
   })
 }
 

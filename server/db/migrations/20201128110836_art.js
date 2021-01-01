@@ -5,10 +5,10 @@ exports.up = (knex, Promise) => {
     table.integer('art_id')
     table.string('artist')
     table.string('country')
-    table.string('description')
+    table.string('description', 50000)
     table.string('img')
-    table.string('tag_id')
-    table.string('forecast_id')
+    table.string('tag_id', 5000)
+    table.string('forecast_id', 5000)
   })
 }
 
