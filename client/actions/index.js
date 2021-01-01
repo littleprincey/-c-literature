@@ -1,20 +1,27 @@
-import { getFruits } from '../apis/fruits'
+import { retrieveBooks } from "../apis/booksAPI"
 
-export const SET_FRUITS = 'SET_FRUITS'
+export const SET_BOOKS = 'SET_BOOKS'
+export const SET_LOADED = 'SET_LOADED'
 
-export function setFruits (fruits) {
+export const setBooks = (books) => {
   return {
-    type: SET_FRUITS,
-    fruits
+    type: SET_BOOKS,
+    books
   }
 }
 
-export function fetchFruits () {
+export const setLoaded = () => {
+  return {
+    type: SET_LOADED,
+  };
+};
+
+export const fetchBooks = () => {
   return dispatch => {
-    return getFruits()
-      .then(fruits => {
-        dispatch(setFruits(fruits))
-        return null
+    return retrieveBooks()
+      .then(books => {
+        dispatch(setBooks(books))
+        dispatch(setLoaded())
       })
   }
 }
