@@ -6,10 +6,10 @@ exports.seed = function(knex) {
         {
           id: 1, 
           book_id: 1, 
-          title: '', 
-          author: '', 
+          title: 'The Dispossed', 
+          author: 'Ursula Le Guin', 
           pub_date: '', 
-          description: '', 
+          description: 'best book ever', 
           img: '', 
           tag_id: [], 
           forecast_id: []

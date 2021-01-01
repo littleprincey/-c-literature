@@ -1,6 +1,7 @@
 import { retrieveBooks } from "../apis/booksAPI"
 
 export const SET_BOOKS = 'SET_BOOKS'
+export const SET_LOADED = 'SET_LOADED'
 
 export const setBooks = (books) => {
   return {
@@ -9,11 +10,18 @@ export const setBooks = (books) => {
   }
 }
 
+export const setLoaded = () => {
+  return {
+    type: SET_LOADED,
+  };
+};
+
 export const fetchBooks = () => {
   return dispatch => {
     return retrieveBooks()
       .then(books => {
         dispatch(setBooks(books))
+        dispatch(setLoaded())
       })
   }
 }

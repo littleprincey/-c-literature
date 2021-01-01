@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import Home from './Home'
 import Nav from './Nav'
-import Form from './Form'
+import Books from './Books'
 
 import { fetchBooks } from '../actions/index'
 
@@ -16,6 +16,7 @@ export class App extends React.Component {
 
   componentDidMount () {
     this.props.dispatch(fetchBooks())
+    console.log('component did in fact mount')
   }
 
   render () {
@@ -27,7 +28,7 @@ export class App extends React.Component {
             <Route path='/' component={Nav}/>
           </div>
           <Route exact path='/' component={Home}/>
-          <Route path='/form' component={Form}/>
+          <Route path='/form' component={Books}/>
         </Router>
         <footer>this is a footer. fuck patriarchy</footer>
       </div>
@@ -38,7 +39,7 @@ export class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-    
+    books: globalState.books
   }
 }
 
