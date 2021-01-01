@@ -1,35 +1,47 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import ReactDOM from 'react-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-import { fetchFruits } from '../actions'
+import Home from './Home'
+import Nav from './Nav'
+import Books from './Books'
+
+import { fetchBooks } from '../actions/index'
 
 export class App extends React.Component {
   state = {
-    fruits: []
+    
   }
 
   componentDidMount () {
-    this.props.dispatch(fetchFruits())
+    this.props.dispatch(fetchBooks())
+    console.log('component did in fact mount')
   }
 
   render () {
+
     return (
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
+      <div className='container'>
+        <Router>
+          <div className='nav'>
+            <Route path='/' component={Nav}/>
+          </div>
+          <Route exact path='/' component={Home}/>
+          <Route path='/form' component={Books}/>
+        </Router>
+        <footer>this is a footer. fuck patriarchy</footer>
       </div>
+      
     )
   }
 }
 
 function mapStateToProps (globalState) {
   return {
-    fruits: globalState.fruits
+    books: globalState.books
   }
 }
 
 export default connect(mapStateToProps)(App)
+

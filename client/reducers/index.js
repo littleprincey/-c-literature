@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux'
 
-import fruits from './fruits'
+import books from './booksReducer'
+import setLoaded from './loadContent'
+
 
 export default combineReducers({
-  fruits
+  books,
+  setLoaded
 })

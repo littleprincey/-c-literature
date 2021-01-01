@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import reducers from './reducers'
 import App from './components/App'
@@ -13,8 +14,10 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)))
 document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
-      <App />
-    </Provider>,
+       <Router>
+        <App />
+       </Router>
+     </Provider>,
     document.getElementById('app')
   )
 })
