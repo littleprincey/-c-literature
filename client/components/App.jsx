@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+import { fetchBooks } from '../actions/index'
 
 
 export class App extends React.Component {
@@ -9,7 +9,7 @@ export class App extends React.Component {
   }
 
   componentDidMount () {
-    this.props.dispatch(fetchFruits())
+    this.props.dispatch(fetchBooks())
   }
 
   render () {

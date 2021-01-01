@@ -304,6 +304,5 @@ exports.seed = function(knex) {
           forecast_id: []
         },
       ]);
-      ]);
     });
 };

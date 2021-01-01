@@ -1,4 +1,4 @@
-\
+
 const { generateHash } = require('authenticare/server')
 
 exports.seed = (knex) => {

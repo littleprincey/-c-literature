@@ -7,8 +7,8 @@ exports.up = (knex, Promise) => {
     table.string('country')
     table.string('description')
     table.string('img')
-    table.array('tag_id')
-    table.array('forecast_id')
+    table.string('tag_id')
+    table.string('forecast_id')
   })
 }
 
