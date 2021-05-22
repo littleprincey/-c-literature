@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Home from './Home'
 import Nav from './Nav'
 import Books from './Books'
+import About from './About'
 
 import { fetchBooks } from '../actions/index'
 
@@ -27,6 +28,7 @@ export class App extends React.Component {
           <div className='nav'>
             <Route path='/' component={Nav}/>
           </div>
+          <Route exact path='/about' component={About}/>
           <Route exact path='/' component={Home}/>
           <Route path='/form' component={Books}/>
         </Router>
