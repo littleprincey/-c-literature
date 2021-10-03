@@ -21,3 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('app')
   )
 })
+
+// "express-jwt": ">=6.0.0",

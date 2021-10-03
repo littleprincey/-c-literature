@@ -3,6 +3,7 @@ const connection = require('./connection')
 
 // READ - Get All Books
 function getBooks(db = connection) {
+  // console.log("the book data")
   return db('books')
     .select()
 }
@@ -23,6 +24,7 @@ function addNewBookToDB(newBook, db = connection){
   // here we're going into the books db, inserting & automatically returning an array of ids for whatever thing(s) has been inserted, but we just want the id of the task we've added, hence the .then
   .then(ids => ids[0])
 }
+
 
 module.exports = {
   getBooks,

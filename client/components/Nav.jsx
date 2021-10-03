@@ -5,7 +5,7 @@ const Nav = () => {
     <div className="nav-links">
       <h3><a href="/about">about</a></h3> 
       <h3><a href="/">home</a></h3> 
-
+      <h3><a href="/all">everything</a></h3> 
     </div>
   )
 }

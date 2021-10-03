@@ -292,8 +292,8 @@ exports.seed = function(knex) {
         {
           id: 27, 
           book_id: 27, 
-          title: '', 
-          author: '', 
+          title: 'An Unkindness of Ghosts', 
+          author: 'Rivers Solomon', 
           pub_date: '', 
           description: '', 
           img: '', 
@@ -303,8 +303,8 @@ exports.seed = function(knex) {
         {
           id: 28, 
           book_id: 28, 
-          title: '', 
-          author: '', 
+          title: 'A Memory Called Empire', 
+          author: 'Arkady Martine', 
           pub_date: '', 
           description: '', 
           img: '', 

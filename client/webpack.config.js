@@ -6,7 +6,7 @@ const webpack = require('webpack')
 module.exports = {
   entry: ['./client/index.js', './client/styles/index.scss'],
   output: {
-    path: path.join(__dirname, '..', 'server', 'public'),
+    path: path.join(__dirname, '..', 'server', '/public'),
     filename: 'bundle.js'
   },
   mode: 'development',

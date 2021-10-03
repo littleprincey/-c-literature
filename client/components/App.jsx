@@ -28,9 +28,9 @@ export class App extends React.Component {
           <div className='nav'>
             <Route path='/' component={Nav}/>
           </div>
-          <Route exact path='/about' component={About}/>
           <Route exact path='/' component={Home}/>
-          <Route path='/form' component={Books}/>
+          <Route exact path='/about' component={About}/>
+          <Route path='/bookList' component={Books}/>
         </Router>
         <footer><a href='https://www.linkedin.com/in/orlando-bright-289724130/'>Orlando's LinkedIn</a></footer>
       </div>
